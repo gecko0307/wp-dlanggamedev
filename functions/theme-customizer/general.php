@@ -59,7 +59,7 @@ function wpex_customizer_general($wp_customize) {
 	// Enable/Disable Social
 	$wp_customize->add_setting( 'wpex_header_aside', array(
 		'type'		=> 'theme_mod',
-		'default'	=> '1',
+		'default'	=> '0',
 	) );
 
 	$wp_customize->add_control( 'wpex_header_aside', array(
@@ -115,7 +115,7 @@ function wpex_customizer_general($wp_customize) {
 	// Display Excerpts
 	$wp_customize->add_setting( 'wpex_entry_content_excerpt', array(
 		'type'		=> 'theme_mod',
-		'default'	=> 'excerpt',
+		'default'	=> 'content',
 	) );
 
 	$wp_customize->add_control( 'wpex_entry_content_excerpt', array(
@@ -147,7 +147,7 @@ function wpex_customizer_general($wp_customize) {
 	// Copyright
 	$wp_customize->add_setting( 'wpex_copyright', array(
 		'type'		=> 'theme_mod',
-		'default'	=> 'Powered by <a href=\"http://www.wordpress.org\" title="WordPress" target="_blank">WordPress</a> and <a href=\"http://themeforest.net/user/WPExplorer?ref=WPExplorer" target="_blank" title="WPExplorer" rel="nofollow">WPExplorer Themes</a>',
+		'default'	=> 'Powered by <a href=\"http://www.wordpress.org\" title="WordPress" target="_blank">WordPress</a>',
 	) );
 
 	$wp_customize->add_control( new WPEX_Customize_Textarea_Control( $wp_customize, 'wpex_copyright', array(

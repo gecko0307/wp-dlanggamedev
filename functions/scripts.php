@@ -17,8 +17,8 @@ function wpex_load_scripts() {
 	**/
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 	wp_enqueue_style( 'wpex-responsive', get_template_directory_uri() .'/responsive.css' );
-	wp_enqueue_style( 'wpex-google-font-noto-serif', 'http://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic' );
-	wp_enqueue_style( 'wpex-google-font-source-sans-pro', 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,600italic,700italic&subset=latin,vietnamese,latin-ext' );
+	wp_enqueue_style( 'wpex-google-font-noto-serif', 'https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic' );
+	wp_enqueue_style( 'wpex-google-font-source-sans-pro', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,600italic,700italic&subset=latin,vietnamese,latin-ext' );
 	if ( function_exists( 'wpcf7_enqueue_styles') ) {
 		wp_dequeue_style( 'contact-form-7' );
 	}
