@@ -1,6 +1,8 @@
 # WP DLangGamedev
 WordPress theme used at https://gamedev.timurgafarov.ru. Based on [WPEX Blogger](https://wpexplorer-demos.com/blogger/) 1.2 by WPExplorer.
 
+![thumb](readme-thumb.jpg)
+
 ## Changes from WPEX Blogger
 - Fix some issues, including PHP 8.0 compatibility
 - Additional styles
