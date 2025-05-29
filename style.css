@@ -426,6 +426,12 @@ p.logged-in-as { font-size: 0.9em; margin-bottom: 20px }
 /* ================================== */
 /* Additional styles by Timur Gafarov */
 /* ================================== */
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	font-family: sans-serif !important;
 	overflow-x: hidden;
@@ -437,6 +443,9 @@ body {
 }
 
 #wrap {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 	padding-bottom: 0;
 }
 
@@ -734,4 +743,22 @@ input[type="search"].wp-block-search__input:-webkit-autofill {
 
 .wp-block-image img {
 	margin-bottom: 10px;
+}
+
+.menu-item a {
+	user-select: none;
+}
+
+.menu-item a[href="#"],
+.sidr-class-menu-item a[href="#"]{
+	cursor: default;
+	pointer-events: none;
+}
+
+.widget_search {
+	margin-top: 10px !important;
+}
+
+.wp-element-button {
+	font-family: sans-serif !important;
 }
