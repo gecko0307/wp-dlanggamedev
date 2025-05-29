@@ -17,16 +17,27 @@ jQuery( function($) {
 			source: '#sidr-close, #site-navigation, #mobile-search',
 			side: 'left'
 		});
+
 		$(".sidr-class-toggle-sidr-close").click( function() {
 			$.sidr('close', 'sidr-main');
 			return false;
 		});
-		
-		// Close the menu on window change
-		$(window).resize(function() {
-			$.sidr('close', 'sidr-main');
-		});
 
+		// Scroll to the search input
+		$('#mobile-search input.field').on('focus', function() {
+			setTimeout(function() {
+				var $input = $('#mobile-search input.field');
+				var container = $('.sidr');
+				if(container.length) {
+					var inputTop = $input.offset().top;
+					var containerTop = container.offset().top;
+					var scrollTo = inputTop - containerTop;
+					container.animate({ scrollTop: scrollTo }, 300);
+				} else {
+					$('html, body').animate({ scrollTop: $(window).scrollTop() + $('#mobile-search input.field').offset().top - 100 }, 300);
+				}
+			}, 400);
+		});
 		
 	}); // End doc ready
 
