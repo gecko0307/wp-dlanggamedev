@@ -450,6 +450,8 @@ body {
 }
 
 #main {
+	display: flex;
+	flex-direction: column;
 	width: 1024px;
 	background-color: #eeeeee;
 }
@@ -458,12 +460,31 @@ body {
 	width: 1024px;
 }
 
-#content {
-	width: 705px;
+#primary {
+	display: flex;
+	flex-direction: row;
 }
 
 #secondary {
 	width: 319px;
+}
+
+#content {
+	display: flex;
+	flex-direction: column;
+	width: 705px;
+}
+
+#blog-wrap {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
+
+#comments {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
 }
 
 a {
@@ -477,6 +498,40 @@ a {
 
 .wp-block-list li::marker {
 	font-size: 1.5em;
+}
+
+.wp-calendar-table caption {
+	padding: 3px !important;
+	cursor: auto !important;
+}
+
+.wp-calendar-table thead tr th {
+	color: #000000 !important;
+}
+
+.wp-calendar-table tbody td {
+	font-size: 13px !important;
+	line-height: 1.6em !important;
+	background-color: #f8f8f8 !important;
+	color: #888888;
+}
+
+.wp-calendar-table td[colspan] {
+	background-color: transparent !important;
+}
+
+.wp-calendar-table td:has(a) {
+	background-color: #cae4d8 !important;
+}
+
+.wp-calendar-table tbody td a {
+	color: #339568 !important;
+	font-weight: bold !important;
+	text-decoration: none !important;
+}
+
+.wp-calendar-table tbody td a:hover {
+	text-decoration: underline !important;
 }
 
 .tablepress {
@@ -774,4 +829,12 @@ input[type="search"].wp-block-search__input:-webkit-autofill {
 
 .wp-element-button {
 	font-family: sans-serif !important;
+}
+
+@media only screen and (max-width: 767px) {
+	.single-post-pagination {
+			  margin-top: 0 !important;
+			  padding-top: 20px !important;
+		margin-bottom: 20px !important;
+	}
 }
