@@ -466,6 +466,10 @@ body {
 	width: 319px;
 }
 
+a {
+	-webkit-tap-highlight-color: transparent !important;
+}
+
 .tablepress {
   width: 100% !important;
 }
